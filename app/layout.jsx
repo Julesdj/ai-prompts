@@ -1,7 +1,9 @@
+import Nav from "@components/Nav";
+import Provider from "@components/Provider";
 import "@styles/globals.css";
 
 export const metadata = {
-    title: "Promptodia",
+    title: "Promptopedia",
     description: "Discover and share AI Prompts",
 };
 
@@ -9,10 +11,15 @@ function RoutLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <div className="main">
-                    <div className="gradient" />
-                </div>
-                <main className="app">{children}</main>
+                <Provider>
+                    <div className="main">
+                        <div className="gradient" />
+                    </div>
+                    <main className="app">
+                        <Nav />
+                        {children}
+                    </main>
+                </Provider>
             </body>
         </html>
     );
