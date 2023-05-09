@@ -4,7 +4,7 @@ function Form({ type, post, setPost, submition, handleSubmit }) {
     return (
         <section className="w-full max-w-full flex flex-col items-center">
             <h1 className="head_text text-left blue_gradient">
-                <span className="">{type} Post</span>
+                <span className="">{type} Prompt</span>
             </h1>
             <p className="desc text-left max-w-md">
                 {type} and share amazing prompts with the world, and let your
@@ -46,7 +46,7 @@ function Form({ type, post, setPost, submition, handleSubmit }) {
                     />
                 </label>
                 <div className="flex justify-end mx-3 mb-5 gap-4">
-                    <Link href="/" className=" text-gray-500 text-sm">
+                    <Link href="/" className="pt-2 text-gray-500 text-sm">
                         Cancel
                     </Link>
                     <button
