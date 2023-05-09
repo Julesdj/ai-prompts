@@ -36,7 +36,7 @@ function Feed() {
         getPosts();
     }, []);
 
-    // Regex Matching
+    // Regex Matching search functionality
     const filterPrompts = (searchtext) => {
         const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
         return posts.filter(
