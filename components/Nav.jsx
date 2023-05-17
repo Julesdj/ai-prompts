@@ -22,12 +22,12 @@ function Nav() {
             <Link href="/" className="flex gap-2 items-center">
                 <Image
                     src="/assets/images/logo.svg"
-                    alt="Promptopedia Logo"
+                    alt="InspireAI+ Logo"
                     width={30}
                     height={30}
                     className="object-contain"
                 />
-                <p className="logo_text">Promptopedia</p>
+                <p className="logo_text">InspireAI+</p>
             </Link>
             <div className="sm:flex hidden">
                 {session?.user ? (
