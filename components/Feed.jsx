@@ -24,15 +24,16 @@ function Feed() {
     const [searchedResults, setSearchedResults] = useState([]);
 
     const [posts, setPosts] = useState([]);
+    const getPosts = async () => {
+        const response = await fetch("/api/prompts", {
+            next: { revalidate: 10 },
+        });
+        const data = await response.json();
+
+        setPosts(data);
+    };
 
     useEffect(() => {
-        const getPosts = async () => {
-            const response = await fetch("/api/prompts");
-            const data = await response.json();
-
-            setPosts(data);
-        };
-
         getPosts();
     }, []);
 
