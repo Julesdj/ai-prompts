@@ -12,7 +12,7 @@ export const connectToDB = async () => {
 
     try {
         await mongoose.connect(process.env.MONGODB_URI, {
-            dbName: "prompt_db",
+            dbName: "inspire-ai-plus_db",
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });

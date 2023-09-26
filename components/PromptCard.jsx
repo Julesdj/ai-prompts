@@ -40,18 +40,13 @@ function PromptCard({ post, handleTagClick, handleEdit, handleDelete }) {
                     <Image
                         src={post.creator.image}
                         alt="user profile picture"
-                        width={40}
-                        height={40}
+                        width={32}
+                        height={32}
                         className="rounded-full"
                     />
-                    <div className="flex flex-col">
-                        <h3 className="font-satoshi font-semibold text-gray-900">
-                            {post.creator.username}
-                        </h3>{" "}
-                        <p className="font-inter text-sm text-gray-500">
-                            {post.creator.email}
-                        </p>
-                    </div>
+                    <h3 className="font-satoshi font-semibold text-gray-900">
+                        {post.creator.displayName}
+                    </h3>
                 </div>
                 <div className="copy_btn" onClick={handleCopy}>
                     <Image
