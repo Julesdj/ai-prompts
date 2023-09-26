@@ -11,7 +11,7 @@ export const connectToDB = async () => {
     }
 
     try {
-        await mongoose.connect(process.env.MONGO_URI, {
+        await mongoose.connect(process.env.MONGODB_URI, {
             dbName: "prompt_db",
             useNewUrlParser: true,
             useUnifiedTopology: true,
